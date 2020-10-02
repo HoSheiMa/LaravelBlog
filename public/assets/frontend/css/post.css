@@ -1,0 +1,217 @@
+/*****************************
+Sidebar styles
+*****************************/
+
+.widget {
+    background-color: #ffffff;
+    box-shadow: 0 1px 3px rgba(0,0,0,.1);
+  }
+  
+  .widget .widget-header {
+    background-color: #3e5062;
+    padding-top: 10px;
+    padding-bottom: 2px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
+  .widget .widget-header h4 {
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  
+  .widget .widget-content {
+    padding: 25px 20px;
+  }
+
+  /*****************************
+SINGLE POST DESIGN
+*****************************/
+body {
+    background-color: #ecf0f5;
+}
+.single-post-container {
+    background-color: #ffffff;
+    box-shadow: 0 1px 3px rgba(0,0,0,.1);
+  }
+  
+  .single-post-container .single-post-content .single-post-title-container {
+    border-bottom: 1px solid #ccc;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 25px;
+  }
+  
+  .single-post-container .single-post-content .single-post-title-container h1 {
+    text-align: center;
+    font-weight: 600;
+    color: #5496d3;
+    text-transform: uppercase;
+    font-size: 30px;
+  }
+  
+  .single-post-container .single-post-content .single-post-title-container p {
+    text-align: center;
+    font-size: 14px;
+    font-style: italic;
+    color: #a9acb1;
+  }
+  
+  .single-post-container .single-post-content .single-post-body {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 25px;
+    padding-top: 25px;
+  }
+  
+  .single-post-share {
+    padding-top: 15px;
+    padding-bottom: 1px;
+    border-top: 1px solid #ccc;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  
+  .single-post-share p {
+    font-size: 15px; 
+    color: #b2b6bc;
+    font-weight: 600;
+  }
+  
+  /* NEWSLETTER SUB AREA */
+  .subscription-form-area {
+    background-color: transparent;
+    background-image: linear-gradient(100deg,#089289 0%,#3e5062 100%);
+    margin-top: 30px;
+    padding: 45px 40px;
+  }
+  
+  .subscription-form-area .subscription-title h3 {
+    color: #ffffff;
+    font-weight: 600;
+  }
+  
+  .subscription-form-area .subscription-title p {
+    color: #ffffff;
+  }
+  
+  /* COMMENT AREA */
+  blockquote {
+    background-color: #ffffff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    border-left: 4px solid #ec643a;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 1px 3px rgba(0,0,0,.1);
+  }
+  
+  .comment-form {
+    background-color: #c8cbcc;
+    padding: 30px;
+    box-shadow: 0 1px 3px rgba(0,0,0,.1);
+    margin-bottom: 40px;
+  }
+  .comment-form-title {
+    margin-bottom: 25px;
+  }
+  
+  .comment-form-title h4 {
+    color: #555;
+    font-weight: 600;
+    font-size: 20px;
+  }
+  
+  .comment-form-title p {
+    color: #555;
+    font-size: 14px;
+  }
+  
+  .comment-form form label {
+    color: #222;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  
+  .btn-comment {
+    border-radius: 0;
+    background-color: #ec643a;
+    color: #ffffff;
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+  
+  .btn-comment:hover {
+    background-color: #ca5531;
+    color: #ffffff;
+    transition: .6s;
+  }
+  
+  .comments-container {
+    background-color: #ffffff;
+    padding: 30px;
+    box-shadow: 0 1px 3px rgba(0,0,0,.1);
+  }
+  
+  .thecomment {
+    padding-top: 28px;
+    padding-bottom: 21px;
+    display: table;
+    width: 100%;
+    border-top: 1px solid #9e9a9a;
+  }
+  
+  .replied {
+    margin-left: 60px;
+    width: 92.5%;
+  
+  }
+  
+  .thecomment:first-child {
+    border-top: none;
+  }
+  
+  .thecomment .author-img {
+    float: left;
+    margin-right: 20px;
+    width: 60px;
+  }
+  
+  .thecomment .comment-text {
+    margin-left: 95px;
+    position: relative;
+  }
+  
+  .thecomment .comment-text span.author {
+    font-weight: bold;
+    display: block;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 11px;
+  }
+  
+  .thecomment .comment-text span.date {
+    font-size: 12px;
+    color: #888888;
+    display: block;
+  }
+  
+  .thecomment .comment-content {
+    margin-top: 15px;
+    margin-bottom: 0;
+  }
+  
+  .thecomment .comment-content p {
+    font-size: 14px;
+  }
+  
+  .thecomment .comment-text span.reply {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }

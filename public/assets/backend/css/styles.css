@@ -1,0 +1,23 @@
+.form-control:focus, .custom-control-input:focus, .custom-control:focus {
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    -o-box-shadow: none !important;
+  }
+
+  input[type=checkbox]:focus {
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    -o-box-shadow: none !important;
+  }
+
+  :focus {
+    outline:0 !important;
+    box-shadow: none !important;
+  }
+
+  .fileupload .btn {
+      background: #4e73df;
+      color: #ffffff;
+  }
