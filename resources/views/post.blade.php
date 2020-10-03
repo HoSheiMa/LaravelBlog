@@ -62,12 +62,20 @@
             </div>
 
             <!-- COMMENT AREA START -->
-
+            @php
+                $commentLength = 0;
+                for ($k=0; $k < sizeof($post->comments); $k++) {
+                    $commentLength++;
+                    for ($v = 0; $v < sizeof($post->comments[$k]->reply); $v++) {
+                    $commentLength++;
+                    }
+                }
+            @endphp
             <blockquote>
-                @if($post->comments->count() <= 1)
-                    {{ $post->comments->count() }} comment
+                @if($commentLength <= 1)
+                    {{ $commentLength }} comment
                 @else
-                    {{ $post->comments->count() }} comments
+                    {{ $commentLength }} comments
                 @endif
             </blockquote>
 
@@ -124,7 +132,7 @@
                                     {{ $comment->comment }}
                                 </div>(
                                 <span class="reply">
-                                    <a onclick="$('#replyForm-{{$comment->id}}').toggle()" href="#" class="comment-reply-link">Reply</a>
+                                    <a onclick="$('#replyForm-{{$comment->id}}').toggle()" class="comment-reply-link">Reply</a>
                                 </span>
                             </div>
 
@@ -147,7 +155,7 @@
                                     </p>
                                 </div>
                                 <span class="reply">
-                                    <a onclick="$('#replyForm-{{$comment->id}}').toggle()" href="#" class="comment-reply-link">Reply</a>
+                                    <a onclick="$('#replyForm-{{$comment->id}}').toggle()"  class="comment-reply-link">Reply</a>
                                 </span>
                             </div>
                         </div>

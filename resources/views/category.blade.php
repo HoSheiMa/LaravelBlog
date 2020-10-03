@@ -1,4 +1,13 @@
+@php
+use App\Post;
+use App\Category;
+use Illuminate\Support\Facades\Session;
+use App\category_post;
+@endphp
+
 @extends('layouts.frontend.frontapp')
+
+
 
 @push('css')
 <link href="{{ asset('public/assets/frontend/css/blog.css') }}" rel="stylesheet">
@@ -21,18 +30,24 @@
 <section id="recent-posts">
 
     <div class="container">
-    
+
         <div class="row">
-        
+
         @if($category->posts->count() > 0)
             @foreach($category->posts as $post)
+            @php
+            // inject category_name to post
+            $c = category_post::where('post_id', $post['id'])->get()->first();
+            $post['category_name'] = Category::where('id', $c['category_id'])->get()->first()['name'];
+
+            @endphp
             <div class="col-lg-4 col-md-6 mb-5">
                 <div class="post-container">
                     <div class="featured-image">
                         <a href="{{ route('post.details', $post->slug) }}">
                         <figure><img src="{{ route('home') . '/' . $post->image }}" alt="{{ $post->title }}" class="img-fluid" lazy="loading"></figure>
                         </a>
-                        <span class="post-cat">category name</span>
+                        <span class="post-cat">{{$post->category_name}}</span>
                     </div>
                 </div>
                 <div class="post-meta d-flex justify-content-between">
@@ -57,14 +72,14 @@
             </div>
             @endforeach
 
-        @else 
+        @else
             <div class="col-lg-12">
                 <h4 class="text-center">No posts in this category!</h4>
             </div>
         @endif
-        
+
         </div> <!-- /.row -->
-    
+
     </div>
 
 </section>
